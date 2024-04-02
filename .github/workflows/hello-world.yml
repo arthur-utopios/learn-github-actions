@@ -28,8 +28,8 @@ jobs:
           node-version: 20
       - shell: bash
         env:
-          MON_PRENOM: ${{ secrets.MON_PRENOM }}
-        run: echo "String length is ${MON_PRENOM}"
+          MON_NOM: ${{ vars.MON_NOM }}
+        run: echo "String length is ${MON_NOM}"
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
