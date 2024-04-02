@@ -22,16 +22,14 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-
       - shell: bash
-      env:
-        MON_PRENOM: ${{ secrets.MON_PRENOM }}
-      run: echo "Hello $MON_PRENOM"
+        env:
+          MON_PRENOM: ${{ secrets.MON_PRENOM }}
+        run: echo "Hello $MON_PRENOM"
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
