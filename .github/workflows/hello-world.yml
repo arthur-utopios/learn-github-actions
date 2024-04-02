@@ -32,6 +32,9 @@ jobs:
       - name: Run a one-line script
         run: echo Hello, world!
 
+      env:
+          MON_PRENON: ${{ secrets.MON_PRENOM }}
+
       # Runs a set of commands using the runners shell
       - name: Run hello name
         run: echo "Hello $MON_PRENOM"
